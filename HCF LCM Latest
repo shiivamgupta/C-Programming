@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{int a,b,temp,lcm,ad,bd;
+
+        printf("Enter the two numbers whose HCF & LCM are to be printed\n");
+        scanf("%d %d",&a,&b);
+        ad=a;
+        bd=b;
+
+        if(a>b)
+
+        while(b>0)
+        {temp=b;
+        b=a%b;
+        a=temp;
+        }
+
+        else
+        while(a>0)
+        {temp=a;
+        a=b%a;
+        b=temp;
+        }
+
+        lcm=(ad*bd)/temp;
+        printf("HCF & LCM is %d and %d\n",temp,lcm);
+
+return 0;
+}
