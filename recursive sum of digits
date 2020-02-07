@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+
+int rsum(int n)
+{
+	int temp,sum=0;
+	while(n)
+	{
+		temp=n%10;
+		n=n/10;
+		sum=sum+temp;	
+	}	
+	
+	if((sum/10==0)&&(sum/11==0))
+	{
+		return sum;
+	}
+	else
+	rsum(sum);
+}
+
+int main()
+{
+	int a,x;
+	printf("enter the number");
+	scanf("%d",&a);
+	x=rsum(a);	
+	printf("%d",x);
+}
